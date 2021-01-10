@@ -35,9 +35,9 @@ function aler(msg, status) {
   Swal.fire({
     title: msg,
     icon: status,
-    confirmButtonText: 'OK',
+    confirmButtonText: 'Continuar',
     backdrop: true,
-    toast: true,
+    toast: false,
     allowOutsideClick: false,
     position: 'center'
   });
