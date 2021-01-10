@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles_inputs.css">
+  <link rel="stylesheet" href="css/styles_login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Registro</title>
+</head>
+
+<body>
+
+  <form class="form animate__animated animate__zoomIn" id="form">
+    <img src="resources/img/LogoAguila.png" class="avatar">
+
+    <div class="form-input-animado name">
+      <input class="firstname" type="text" name="firstname" autocomplete="off" required>
+      <label for="firtname" class="label-input">
+        <span class="content">Nombre</span>
+      </label>
+    </div>
+
+    <div class="form-input-animado name">
+      <input class="lastname" type="text" name="lastname" autocomplete="off" required>
+      <label for="lastname" class="label-input">
+        <span class="content">Apellido</span>
+      </label>
+    </div>
+
+    <div class="form-input-animado">
+      <input type="text" name="email" autocomplete="off" required>
+      <label for="email" class="label-input">
+        <span class="content">Email</span>
+      </label>
+    </div>
+
+    <div class="form-input-animado">
+      <input type="password" name="pass" autocomplete="off" required>
+      <label for="pass" class="label-input">
+        <span class="content">Contraseña</span>
+      </label>
+    </div>
+
+    <div class="form-input-animado">
+      <input type="password" name="Rpass" autocomplete="off" required>
+      <label for="Rpass" class="label-input">
+        <span class="content">Repetir contraseña</span>
+      </label>
+    </div>
+
+    <a href="#" class="button" id="button">Registrar</a>
+
+
+    <div class="link-content">
+      <p>¿Uno nosotros? <a class="links" href="login.html"><span></span>Inicia sesión.</a></p>
+    </div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="js/proceso_signin.js" charset="utf-8"></script>
+</body>
+
+</html>

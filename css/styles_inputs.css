@@ -1,0 +1,59 @@
+.form-input-animado {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  margin-top: 20px;
+}
+
+.form-input-animado input {
+  width: 100%;
+  height: 100%;
+  color: #777777;
+  font-size: 15px;
+  padding-top: 20px;
+  border: none;
+  background: transparent;
+}
+
+.form-input-animado label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.form-input-animado label::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #00C0FF;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+}
+
+.form-input-animado .content{
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form-input-animado input:focus+.label-input .content,
+.form-input-animado input:valid+.label-input .content{
+  transform: translateY(-150%);
+  font-size: 16px;
+  color: #00C0FF;
+}
+
+.form-input-animado input:focus+.label-input::after,
+.form-input-animado input:valid+.label-input::after {
+  transform: translateX(0%);
+}
