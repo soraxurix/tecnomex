@@ -31,7 +31,7 @@ button.addEventListener('click', function(e) {
             confirmButtonText: 'Continuar'
           })
           if (accept) {
-            window.location.replace("index.html");
+            window.location.replace("index.php");
           }
         })()
 
