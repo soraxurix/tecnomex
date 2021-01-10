@@ -17,13 +17,13 @@ button.addEventListener('click', function(e) {
         .then(res => res.json())
         .then(data => {
           if (data == 201) {
-            aler('El correo electronico ya existe. \nIngrese uno distinto.', 'error');
+            aler('El correo electronico ya existe.', 'error');
           }else if (data == 200) {
             aler('Te has registrado exitosamente', 'success');
           }
         });
     } else {
-      aler('Las contraseñas no son iguales. \nIngreselas de nuevo.', 'error');
+      aler('Las contraseñas no son iguales.', 'error');
     }
   } else {
     aler('Los campos están vacios', 'error');
