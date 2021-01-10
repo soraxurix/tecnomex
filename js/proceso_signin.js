@@ -19,7 +19,7 @@ button.addEventListener('click', function(e) {
           if (data == 201) {
             aler('El correo electronico ya existe.', 'error');
           }else if (data == 200) {
-            aler('Te has registrado exitosamente', 'success');
+            aler('Te has registrado exitosamente.', 'success');
           }
         });
     } else {
@@ -37,7 +37,7 @@ function aler(msg, status) {
     icon: status,
     confirmButtonText: 'Continuar',
     backdrop: true,
-    toast: false,
+    toast: true,
     allowOutsideClick: false,
     position: 'center'
   });
