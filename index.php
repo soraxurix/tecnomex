@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles-principal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <title>Principal</title>
 </head>
 
@@ -27,39 +28,18 @@
       </div>
 
     </div>
-<!--
-    <div class="contenedor contenedor-grid">
-      <div class="grid activo" id="grid">
-        <div class="categorias">
-          <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
-          <h3 class="subtitulo">Categorias</h3>
-
-          <a href="#" data-categoria="Tarjetas-gráficas">Tarjetas gráficas<i class="fas fa-angle-right"></i></a>
-          <a href="#" data-categoria="Procesadores">Procesadores<i class="fas fa-angle-right"></i></a>
-          <a href="#" data-categoria="Tarjetas-madres">Tarjetas madres<i class="fas fa-angle-right"></i></a>
-          <a href="#" data-categoria="Memorias-Ram">Memorias RAM<i class="fas fa-angle-right"></i></a>
-        </div>
-
-        <div class="contenedor-subcategorias">
-          <div class="subcategoria " data-categoria="tecnologia-y-computadoras">
-            <div class="enlaces-subcategoria">
-              <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
-              <h3 class="subtitulo">Tecnología y Computadoras</h3>
-              <a href="#">Laptops</a>
-              <a href="#">Tablets</a>
-              <a href="#">Computadoras de Escritorio</a>
-              <a href="#">Monitores</a>
-              <a href="#">Componentes</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
   </nav>
 
   <main>
-    <article></article>
+    <!-- <svg class="wave"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L80,144C160,160,320,192,480,181.3C640,171,800,117,960,106.7C1120,96,1280,128,1360,144L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#0099ff" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,122.7C640,117,800,75,960,53.3C1120,32,1280,32,1360,32L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+    <div class="info">
+      <img src="resources/img/img1.png" class="img1 form animate__animated animate__backInLeft">
+      <img src="resources/img/LogoTecnoMexGrande.png" class="logo form animate__animated animate__backInRight">
+    </div>
   </main>
 
   <script src="js/script-main.js" crossorigin="anonymous"></script>
