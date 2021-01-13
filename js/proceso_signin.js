@@ -17,28 +17,98 @@ button.addEventListener('click', function(e) {
         .then(res => res.json())
         .then(data => {
           if (data == 201) {
-            aler('El correo electronico ya existe.', 'error');
+            alerta('errorCorreo');
           }else if (data == 200) {
-            aler('Te has registrado exitosamente.', 'success');
+            alerta('registroCorrecto');
           }
         });
     } else {
-      aler('Las contraseñas no son iguales.', 'error');
+      alerta('contraseñaRepError');
     }
   } else {
-    aler('Los campos están vacios', 'error');
+    alerta('camposVacios');
   }
 
 });
 
-function aler(msg, status) {
-  Swal.fire({
-    title: msg,
-    icon: status,
-    confirmButtonText: 'Continuar',
-    backdrop: true,
-    toast: false,
-    allowOutsideClick: false,
-    position: 'center'
-  });
+// Alertas
+function alerta(accion) {
+  switch (accion) {
+    case "contraseñaRepError":
+      Swal.fire({
+        title: '<p class="alerta-bad">Las contraseñas no son iguales.',
+        icon: "error",
+        background: '#F39090',
+        iconColor: '#990404',
+        showConfirmButton: false,
+        position: 'bottom-start',
+        toast: true,
+        showClass: {
+          popup: 'animate__animated animate__fadeInLeftBig'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutRightBig'
+        }
+      });
+      break;
+    case "camposVacios":
+      Swal.fire({
+        title: '<p class="alerta-bad">Los campos están vacíos.',
+        html: '<p class="alerta-bad">Ingreselos para poder continuar.',
+        icon: "error",
+        background: '#F39090',
+        iconColor: '#990404',
+        showConfirmButton: false,
+        position: 'bottom-start',
+        toast: true,
+        showClass: {
+          popup: 'animate__animated animate__fadeInLeftBig'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutRightBig'
+        }
+      });
+      break;
+    case "errorCorreo":
+      Swal.fire({
+        title: '<p class="alerta-bad">El email ya existe.',
+        html: '<p class="alerta-bad">Ingrese otro.',
+        icon: "error",
+        background: '#F39090',
+        iconColor: '#990404',
+        showConfirmButton: false,
+        position: 'bottom-start',
+        toast: true,
+        showClass: {
+          popup: 'animate__animated animate__fadeInLeftBig'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutRightBig'
+        }
+      });
+      break;
+    case "registroCorrecto":
+      (async () => {
+        const {
+          value: accept
+        } = await Swal.fire({
+          title: '<p class="alerta-ok">Has crado tu cuenta exitosamente',
+          icon: "success",
+          allowOutsideClick: false,
+          backdrop: true,
+          confirmButtonText: '<p class="boton-ok">Continuar',
+          toast: false,
+          background: '#84D4F2',
+          iconColor: '#034760',
+          confirmButtonColor: '#034760',
+          showClass: {
+            popup: 'animate__animated animate__fadeInLeftBig bordes'
+          }
+        })
+        if (accept) {
+          window.location.replace("index.php");
+        }
+      })()
+      break;
+  }
 }

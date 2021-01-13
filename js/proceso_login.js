@@ -20,23 +20,9 @@ button.addEventListener('click', function(e) {
       }
 
       if (count > 0) {
-        (async () => {
-          const {
-            value: accept
-          } = await Swal.fire({
-            title: nombre + ', has inicado sesión exitosamente',
-            icon: "success",
-            allowOutsideClick: false,
-            backdrop: true,
-            confirmButtonText: 'Continuar'
-          })
-          if (accept) {
-            window.location.replace("index.php");
-          }
-        })()
-
+        alerta("usuarioCorrecto");
       } else {
-        aler("Hubo un error", "error");
+        alerta("contraseñaError");
       }
 
       // for (const userInfo of data) {
@@ -45,14 +31,87 @@ button.addEventListener('click', function(e) {
     });
 });
 
-function aler(msg, status) {
-  Swal.fire({
-    title: msg,
-    icon: status,
-    confirmButtonText: 'Continuar',
-    backdrop: true,
-    toast: false,
-    allowOutsideClick: false,
-    position: 'center'
-  });
+
+
+// Alertas
+function alerta(accion) {
+  switch (accion) {
+    case "contraseñaError":
+      Swal.fire({
+        title: '<p class="alerta-bad">Ingrese un contraseña válida.',
+        html: '<p class="alerta-bad">Debe tener mínimo 8 carácteres.',
+        icon: "error",
+        background: '#F39090',
+        iconColor: '#990404',
+        showConfirmButton: false,
+        position: 'bottom-start',
+        toast: true,
+        showClass: {
+          popup: 'animate__animated animate__fadeInLeftBig'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutRightBig'
+        }
+      });
+      break;
+    case "errorUsuario":
+      Swal.fire({
+        title: '<p class="alerta-bad">La contraseña o el email no coinciden.',
+        html: '<p class="alerta-bad">Intentelo de nuevo.',
+        icon: "error",
+        background: '#F39090',
+        iconColor: '#990404',
+        showConfirmButton: false,
+        position: 'bottom-start',
+        toast: true,
+        showClass: {
+          popup: 'animate__animated animate__fadeInLeftBig'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutRightBig'
+        }
+      });
+      break;
+    case "errorCorreo":
+      Swal.fire({
+        title: '<p class="alerta-bad">Ingrese un correo válido.',
+        html: '<p class="alerta-bad">Intentalo de nuevo.',
+        icon: "error",
+        background: '#F39090',
+        iconColor: '#990404',
+        showConfirmButton: false,
+        position: 'bottom-start',
+        toast: true,
+        showClass: {
+          popup: 'animate__animated animate__fadeInLeftBig'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutRightBig'
+        }
+      });
+      break;
+    case "usuarioCorrecto":
+      (async () => {
+        const {
+          value: accept
+        } = await Swal.fire({
+          title: '<p class="alerta-ok">Has iniciado sesión exitosamente',
+          icon: "success",
+          allowOutsideClick: false,
+          backdrop: true,
+          confirmButtonText: '<p class="boton-ok">Continuar',
+          toast: false,
+          background: '#84D4F2',
+          iconColor: '#034760',
+          confirmButtonColor: '#034760',
+          showClass: {
+            popup: 'animate__animated animate__fadeInLeftBig'
+          }
+        })
+        if (accept) {
+          window.location.replace("index.php");
+        }
+      })()
+      break;
+  }
 }

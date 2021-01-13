@@ -114,3 +114,16 @@ p .links {
     width: 99%;
   }
 }
+
+.alerta-bad{
+  color:#990404;
+}
+.alerta-ok{
+  color:#034760;
+}
+.boton-ok{
+  color:#84D4F2;
+}
+.bordes{
+  border-radius: 1px;
+}
