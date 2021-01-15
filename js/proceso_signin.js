@@ -1,6 +1,11 @@
 button = document.getElementById("button");
 form = document.getElementById("form");
 const dataForm = new FormData(form);
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', function() {
+  loader.classList.add('hidden');
+});
 
 button.addEventListener('click', function(e) {
   e.preventDefault();

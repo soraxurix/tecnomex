@@ -37,13 +37,14 @@
       <path fill="#0099ff" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,122.7C640,117,800,75,960,53.3C1120,32,1280,32,1360,32L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
     </svg>
     <div class="info">
-      <img src="resources/img/img1.png" class="img1 form animate__animated animate__backInLeft">
+      <img src="resources/img/img1.png" class="img1  animate__animated animate__backInLeft">
       <img src="resources/img/LogoTecnoMexGrande.png" class="logo form animate__animated animate__backInRight">
     </div>
   </main>
 
   <script src="js/script-main.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/425540833b.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

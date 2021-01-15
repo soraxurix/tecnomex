@@ -1,5 +1,10 @@
 const button = document.getElementById('button');
 const form = document.getElementById('form');
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', function() {
+  loader.classList.add('hidden');
+});
 
 
 button.addEventListener('click', function(e) {
@@ -12,22 +17,13 @@ button.addEventListener('click', function(e) {
     })
     .then(res => res.json())
     .then(data => {
-      const count = Object.keys(data).length;
-
-      var nombre = "";
-      for (const userInfo of data) {
-        nombre = userInfo.Nombre;
-      }
-
-      if (count > 0) {
+      if (data == 201) {
+          alerta("errorEmailExiste");
+      }else if (data == 202) {
+        alerta("errorContraseñaNoExiste");
+      }else{
         alerta("usuarioCorrecto");
-      } else {
-        alerta("contraseñaError");
       }
-
-      // for (const userInfo of data) {
-      //   nombre= userInfo.Nombre;
-      // }
     });
 });
 
@@ -54,9 +50,9 @@ function alerta(accion) {
         }
       });
       break;
-    case "errorUsuario":
+    case "errorEmailExiste":
       Swal.fire({
-        title: '<p class="alerta-bad">La contraseña o el email no coinciden.',
+        title: '<p class="alerta-bad">El email no existe.',
         html: '<p class="alerta-bad">Intentelo de nuevo.',
         icon: "error",
         background: '#F39090',
@@ -72,6 +68,24 @@ function alerta(accion) {
         }
       });
       break;
+      case "errorContraseñaNoExiste":
+        Swal.fire({
+          title: '<p class="alerta-bad">El contraseña no es correcta.',
+          html: '<p class="alerta-bad">Intentelo de nuevo.',
+          icon: "error",
+          background: '#F39090',
+          iconColor: '#990404',
+          showConfirmButton: false,
+          position: 'bottom-start',
+          toast: true,
+          showClass: {
+            popup: 'animate__animated animate__fadeInLeftBig'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutRightBig'
+          }
+        });
+        break;
     case "errorCorreo":
       Swal.fire({
         title: '<p class="alerta-bad">Ingrese un correo válido.',

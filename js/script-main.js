@@ -1,3 +1,9 @@
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', function() {
+  loader.classList.add('hidden');
+});
+
 const contenedorEnlacesNav = document.querySelector('#menu .contenedor-noresponsive'),
   esDispositivoMovil = () => window.innerWidth <= 800;
 
