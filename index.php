@@ -17,7 +17,7 @@
     </div>
     <div class="contenedor contenedor-noresponsive">
       <div class="enlaces">
-        <a class="links" href="">Componentes<span></span></a>
+        <a class="links" href="">Edgar joto<span></span></a>
         <a class="links" href="">Promociones<span></span></a>
         <a class="links" href="">Sobre nosotros<span></span></a>
         <a class="links" href="">Ayuda<span></span></a>
@@ -33,7 +33,7 @@
 
   <main>
     <!-- <svg class="wave"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L80,144C160,160,320,192,480,181.3C640,171,800,117,960,106.7C1120,96,1280,128,1360,144L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#0099ff" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,122.7C640,117,800,75,960,53.3C1120,32,1280,32,1360,32L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
     </svg>
     <div class="info">
