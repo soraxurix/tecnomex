@@ -17,6 +17,10 @@
   background: transparent;
 }
 
+.form-input-animado input:focus{
+  outline: none;
+}
+
 .form-input-animado label {
   position: absolute;
   bottom: 0px;
