@@ -23,11 +23,9 @@
  if ($row = $result->fetch_array()) {
    echo json_encode(201);
  }else{
-   $hash=password_hash('$pass', PASSWORD_DEFAULT);
-   $consulta = "INSERT INTO Clientes VALUES ('$id','$nombre','$apellido','$email','$hash', '$fechareg')";
+   $consulta = "INSERT INTO Clientes VALUES ('$id','$nombre','$apellido','$email','$pass', '$fechareg')";
    $result = mysqli_query($con, $consulta);
    echo json_encode(200);
-   echo $hash
  }
 
  function checkID() {
