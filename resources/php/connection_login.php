@@ -14,7 +14,7 @@ $consulta2 = "SELECT idCliente from Clientes where Pass = '$pass' and Email = '$
 $result2 = mysqli_query($con, $consulta2);
 
 if (!($row = $result1->fetch_array())) {
-  echo json_encode(201); //Manda un error en caso que la contraseña no exista
+  echo json_encode(201); //Manda un error en caso que la email no exista
 }else if (!($row = $result2->fetch_array())) {
   echo json_encode(202); //Manda un error en caso que la contraseña del usuario no exista
 }else{
