@@ -94,7 +94,7 @@ a {
 .info{
   display: flex;
   justify-content: space-around;
-  margin-bottom: 80px;
+  margin-bottom: 125px;
 }
 
 @media screen and (max-width: 650px){
