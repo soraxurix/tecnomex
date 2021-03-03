@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles-principal.css">
+  <link rel="stylesheet" href="css/estiloSobreN.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <title>Principal</title>
 </head>
 
 <body>
+  
   <nav class="menu" id="menu">
     <div class="contenedor boton-responsive">
       <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i><span></span></button>
@@ -41,6 +44,55 @@
       <img src="resources/img/LogoTecnoMexGrande.png" class="logo form animate__animated animate__backInRight">
     </div>
   </main>
+
+
+  <footer class="footer">
+        <div class="footer-left">
+            <img src="resources/img/LogoAguila.png" alt="">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur, 
+            </p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <ul class="footer-right">
+            <li>
+                <h2>Productos</h2>
+                <ul class="box">
+                    <li><a href="#">Tarjetas graficas</a></li>
+                    <li><a href="#">Tarjetas madre</a></li>
+                    <li><a href="#">Procesadores</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Contacto</h2>
+                <ul class="box">
+                    <li><a href="#">tecnomex@outlook.com</a></li>
+                    <li><a href="#">+52 800 900 2000</a></li>
+                    <li><a href="#">Formulario</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Ubicación</h2>
+                <ul class="box">
+                    <li><a href="#">Col. Urbana #189</a></li>
+                    <li><a href="#">Texas, Nuevo Mexico</a></li>
+                    <li><a href="#">Estados Unidos</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="footer-bottom">
+            <p>Todos los derechos reservados por &copy; Tecnomex la mera Verga </p>
+        </div>
+    </footer>
 
   <script src="js/script-main.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/425540833b.js" crossorigin="anonymous"></script>
