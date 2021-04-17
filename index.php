@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  
+
   <nav class="menu" id="menu">
     <div class="contenedor boton-responsive">
       <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i><span></span></button>
@@ -51,7 +51,7 @@
             <img src="resources/img/LogoAguila.png" alt="">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, 
+                Aspernatur,
             </p>
             <div class="social">
                 <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -90,7 +90,7 @@
         </ul>
 
         <div class="footer-bottom">
-            <p>Todos los derechos reservados por &copy; Tecnomex la mera Verga </p>
+            <p>Todos los derechos reservados por &copy; Tecnomex </p>
         </div>
     </footer>
 
